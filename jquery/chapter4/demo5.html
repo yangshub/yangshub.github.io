@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>attr()</title>
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#val").attr("href","demo4.html");
+            });
+        });
+    </script>
+</head>
+<body>
+<p><a href="demo2.html" id="val">val()</a></p>
+<button>修改 href 值</button>
+<p>点击按钮修改后，可以点击链接查看链接地址是否变化。</p>
+</body>
+</html>
