@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>val()</title>
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                alert("值为： " + $("#test").val());
+            });
+        });
+    </script>
+</head>
+<body>
+<p>名称： <input type="text" id="test" value="hello world"></p>
+<button>显示值</button>
+</body>
+</html>

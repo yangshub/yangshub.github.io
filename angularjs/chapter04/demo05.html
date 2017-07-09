@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../libs-1.4.6/angular.min.js"></script>
+    <style>
+        input.ng-invalid{
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+<form ng-app="" name="myForm">
+    输入你的名字：
+    <input name="myName" ng-model="myText" required><br>
+    <p>编辑文本域不同状态背景颜色会发生变化</p>
+    <p>文本域添加了required属性，该值是必须的，如果为空则是不合法的</p>
+</form>
+</body>
+</html>

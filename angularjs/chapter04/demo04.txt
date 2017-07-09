@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../libs-1.4.6/angular.min.js"></script>
+</head>
+<body>
+<form ng-app="" name="myForm" ng-init="myText = 'test@runoob.com'">
+    Email:
+    <input type="email" name="myAddress" ng-model="myText" required><br>
+    <h1>状态</h1>
+    <p>Valid: {{ myForm.myAddress.$valid }} (如果输入的值是合法的则为true）</p>
+    <p>Dirty: {{ myForm.myAddress.$dirty }} (如果值该笔那则为true）</p>
+    <p>Touched: {{myForm.myAddress.$touched }} (如果通过点击则为true）</p>
+</form>
+</body>
+</html>

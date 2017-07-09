@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Simple app</title>
+    <script src="../libs-1.4.6/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="">
+    <input ng-model="person.name" type="text" placeholder="Your name">
+    <h1>Hello {{person.name}}</h1>
+</div>
+</body>
+</html>

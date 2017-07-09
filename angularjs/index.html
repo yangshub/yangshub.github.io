@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>index</title>
+        <script src="jquery-3.2.1.js"></script>
+        <style type="text/css">
+            #demo{
+                width: 500px;
+                height: 800px;
+                background-color: #e5eecc;
+                float: right;
+            }
+            #menu{
+                border: 1px solid;
+                float: left;
+                width: 250px;
+                height: 800px;
+            }
+            #code{
+                border: 1px solid;
+                float: left;
+                width: 500px;
+                height: 800px;
+            }
+            .chapter{
+                display: block;
+                border: 1px solid;
+                background-color: lightblue;
+            }
+
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".chapter").click(function (e) {
+                    var id = $(e.target).attr("id");
+                    $("#"+id).next().slideToggle("slow");
+                });
+                $(".changeDemo").click(function (e) {
+                    var name = $(e.target).attr("name");
+                    var parent = $(e.target).parent().prev().attr("id");
+                    var address = parent + "/" + name +".";
+                    var demo = address + "html";
+                    var code = address + "txt";
+                    document.getElementById("demo").src=demo;
+                    document.getElementById("code").src=code;
+                });
+            });
+            function changeDemo(address){
+                var demo = address + "html";
+                var code = address + "txt";
+                document.getElementById("demo").src=demo;
+                document.getElementById("code").src=code;
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id="navigate"></div>
+        <div id="content">
+            <div id="menu">
+                <div>
+                    <div class="chapter" id="chapter02">chapter02</div>
+                    <div>
+                        <li class="changeDemo" name="FirstAngularJs">firstAngularJs</li>
+                        <li class="changeDemo" name="demo02">demo02</li>
+                        <li class="changeDemo" name="demo03">demo03</li>
+                        <li class="changeDemo" name="demo04">demo04</li>
+                        <li class="changeDemo" name="demo05">demo05</li>
+                        <li class="changeDemo" name="demo06">demo06</li>
+                        <li class="changeDemo" name="demo07">demo07</li>
+                        <li class="changeDemo" name="demo08">demo08</li>
+                        <li class="changeDemo" name="demo09">demo09</li>
+                        <li class="changeDemo" name="demo10">demo10</li>
+                        <li class="changeDemo" name="demo11">demo11</li>
+                    </div>
+                </div>
+                <div>
+                    <div class="chapter" id="chapter03">chapter03</div>
+                    <div>
+                        <li class="changeDemo" name="demo01">demo01</li>
+                        <li class="changeDemo" name="demo02">demo02</li>
+                        <li class="changeDemo" name="demo03">demo03</li>
+                        <li class="changeDemo" name="demo04">demo04</li>
+                        <li class="changeDemo" name="demo05">demo05</li>
+                        <li class="changeDemo" name="demo06">demo06</li>
+                        <li class="changeDemo" name="demo07">demo07</li>
+                        <li class="changeDemo" name="demo08">demo08</li>
+                    </div>
+                </div>
+                <div>
+                    <div class="chapter" id="chapter04">chapter04</div>
+                    <div>
+                        <li class="changeDemo" name="demo01">demo01</li>
+                        <li class="changeDemo" name="demo02">demo02</li>
+                        <li class="changeDemo" name="demo03">demo03</li>
+                        <li class="changeDemo" name="demo04">demo04</li>
+                        <li class="changeDemo" name="demo05">demo05</li>
+                    </div>
+                </div>
+                <div>
+                    <div class="chapter" id="chapter05">chapter05</div>
+                    <div>
+                        <li class="changeDemo" name="demo01">demo01</li>
+                        <li class="changeDemo" name="demo02">demo02</li>
+                        <li class="changeDemo" name="demo03">demo03</li>
+                        <li class="changeDemo" name="demo04">demo04</li>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <iframe id="code" src="chapter02/FirstAngularJs.txt"></iframe>
+            </div>
+            <div>
+                <iframe id="demo" src="chapter02/FirstAngularJs.html"></iframe>
+            </div>
+        </div>
+
+    </body>
+</html>

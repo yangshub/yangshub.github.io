@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>attr()</title>
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("button").click(function () {
+                alert($("#val").attr("href"));
+            })
+        })
+    </script>
+</head>
+<body>
+<p><a href="demo2.html" id="val">val()</a> </p>
+<button>显示href 属性的值</button>
+</body>
+</html>

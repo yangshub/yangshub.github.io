@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#chapter02").click(function () {
+                $("#chapter02").next().slideToggle("slow");
+            });
+        });
+        function changeDemo(address){
+            document.getElementById("demo").src=address;
+        }
+    </script>
+    <style type="text/css">
+        div div div  li{
+            display: block;
+            border: 1px solid #EEE;
+        }
+    </style>
+</head>
+<body>
+<div id="menu">
+    <div>
+        <div id="chapter02">chapter02</div>
+        <div>
+            <li onclick="changeDemo('chapter02/demo02.html')">demo02</li>
+            <li onclick="changeDemo('chapter02/demo03.html')">demo03</li>
+            <li onclick="changeDemo('chapter02/demo04.html')">demo04</li>
+            <li onclick="changeDemo('chapter02/demo05.html')">demo05</li>
+        </div>
+    </div>
+</div>
+<div>
+    <iframe id="demo" src="chapter02/FirstAngularJs.html"></iframe>
+</div>
+</body>
+</html>
